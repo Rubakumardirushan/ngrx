@@ -1,0 +1,70 @@
+<div class="container">
+
+  <h1> Update post </h1>
+
+
+
+  <a href="#" class="btn btn-primary" routerLink="/post/index"> Back</a>
+  <form  [formGroup]="form" (ngSubmit)="submit()">
+
+  <div class="form-group" >
+
+  <label for="title">Title:</label>
+  <input  type="text" id="title" class="form-control " formControlName="title">
+
+
+  @if(f['title'].invalid && f['title'].touched){
+    <div class="alert alert-danger">
+    <div>
+      title is required
+    </div>
+  </div>
+  }
+
+
+  </div>
+
+  <div class="form-group">
+  <label for="body " id="body " ></label>
+  <textarea  id="body" cols="30" rows="10" class="form-control" formControlName="body"></textarea>
+
+  @if(f['body'].invalid && f['body'].touched){
+  <div class="alert alert-danger">body is required</div>
+
+  }
+
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="!form.valid" >submit</button>
+
+
+
+
+
+
+
+
+
+
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>

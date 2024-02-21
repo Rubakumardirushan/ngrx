@@ -1,0 +1,40 @@
+<div class="container">
+
+  <h1>Angular  CRUS exmaple</h1>
+
+  <a   routerLink="post/create"  class="btn btn-success">Create New post</a>
+  <table class="tabel table-bordered">
+  <thead>
+    <tr>
+
+      post/create
+      <th>ID</th>
+      <th>Title</th>
+      <th>Body</th>
+
+  </thead>
+
+  <tbody>
+  @for(post of posts; track post){
+    <tr>
+    <td>{{post.id}}</td>
+    <td>{{post.title}}</td>
+    <td>{{post.body}}</td>
+
+
+
+
+  </tr>
+
+  }
+  </tbody>
+
+  </table>
+
+
+
+
+
+
+
+  </div>
